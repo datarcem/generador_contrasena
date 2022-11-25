@@ -4,9 +4,9 @@ sam[[2]]<-letters
 sam[[3]]<-LETTERS
 sam[[4]]<-c("!", "§", "$", "%", "&", "(", ")", "*", "#", "'", "+", ".")
 
-pass_especial <- function(caracteres){
-  tmp<-mapply(sample,sam,c(5,5,5,5))
-  paste(sample(tmp,caracteres,replace=FALSE),collapse="")
+pass_especial <- function(caracteres=12){
+  tmp<-mapply(sample,sam,c(8,8,8,8))
+  paste(sample(tmp,caracteres,replace=TRUE),collapse="")
 }
 
 pass_especial(12)
